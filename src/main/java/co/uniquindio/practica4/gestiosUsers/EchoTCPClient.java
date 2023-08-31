@@ -1,4 +1,4 @@
-package co.uniquindio.practicas.model;
+package co.uniquindio.practica4.gestiosUsers;
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
@@ -41,7 +41,7 @@ public class EchoTCPClient {
         boolean exit = false;
 
         do {
-            System.out.println("MENU:");
+            System.out.println("\n"+"MENU:");
             System.out.println("1. Ingresar usuario");
             System.out.println("2. Mostrar informe de usuarios");
             System.out.println("3. Mostrar informe detallado de usuarios");
@@ -69,6 +69,7 @@ public class EchoTCPClient {
 
                     try {
                         String response = fromNetwork.readLine();
+                        System.out.println("Informe de todos los usuarios registrados");
                         System.out.println("[Server] " + response);
                     } catch (IOException e) {
                         System.err.println("Error al recibir la respuesta del servidor: " + e.getMessage());
@@ -79,6 +80,7 @@ public class EchoTCPClient {
 
                     try {
                         String response = fromNetwork.readLine();
+                        System.out.println("Informe usuarios registrados con el numero de veces que han ingresado");
                         System.out.println("[Server] " + response);
                     } catch (IOException e) {
                         System.err.println("Error al recibir la respuesta del servidor: " + e.getMessage());

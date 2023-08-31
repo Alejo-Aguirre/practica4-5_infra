@@ -1,4 +1,4 @@
-package co.uniquindio.practicas.model;
+package co.uniquindio.practica4.gestiosUsers;
 
 import java.io.*;
 import java.net.*;
@@ -21,6 +21,7 @@ public class EchoTCPServer {
 
     public EchoTCPServer() {
         System.out.println("Echo TCP server is running on port: " + PORT);
+        System.out.println("Esperando respuesta de EchoTCPClient " );
     }
 
     public void init() throws Exception {
